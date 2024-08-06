@@ -1,6 +1,6 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) ?? [];
 
-// Función para actualizar el precio total en el footer
+
 const actualizarTotal = () => {
     let total = carrito.reduce((acc, juego) => {
         let precio = parseFloat(juego.price);
@@ -19,7 +19,6 @@ const actualizarTotal = () => {
     }
 };
 
-// Función para renderizar los productos en el carrito
 const renderProducts = () => {
     let contenedorCarrito = document.getElementById("container-carrito");
     contenedorCarrito.innerHTML = "";
@@ -42,7 +41,7 @@ const renderProducts = () => {
     }
 };
 
-// Función para quitar un juego del carrito
+
 const eliminarDelCarrito = (id) => {
     let index = carrito.findIndex((element) => element.id === id);
     if (index !== -1) {
